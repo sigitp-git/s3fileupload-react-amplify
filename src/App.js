@@ -7,7 +7,7 @@ import {
   AmplifySignIn,
   AmplifySignUp,
 } from '@aws-amplify/ui-react'
-import { MdSend } from 'react-icons/md'
+import { MdSend /* MdList */ } from 'react-icons/md'
 import awsConfig from './aws-exports'
 Amplify.configure(awsConfig)
 
@@ -18,23 +18,34 @@ const App = () => {
 
   const onChange = (e) => {
     e.preventDefault()
-    setFile(e.target.files[0])
-    setName(e.target.files[0].name)
+    if (e.target.files[0] !== null) {
+      setFile(e.target.files[0])
+      setName(e.target.files[0].name)
+    }
   }
 
   const onSubmit = (e) => {
     e.preventDefault()
-    Storage.put(name, file, {
-      contentType: file.type,
-    })
-      .then((result) => {
-        console.log(result)
-        setResponse(`Success uploading file: ${name}!`)
+    if (file) {
+      Storage.put(name, file, {
+        /* level: 'protected', */
+        contentType: file.type,
       })
-      .catch((err) => {
-        console.log(err)
-        setResponse(`Can't upload file: ${err}`)
-      })
+        .then((result) => {
+          console.log(result)
+          setResponse(`Success uploading file: ${name}!`)
+        })
+        .then(() => {
+          document.getElementById('file-input').value = null
+          setFile(null)
+        })
+        .catch((err) => {
+          console.log(err)
+          setResponse(`Can't upload file: ${err}`)
+        })
+    } else {
+      setResponse(`Files needed!`)
+    }
   }
 
   return (
@@ -61,7 +72,7 @@ const App = () => {
             <input
               className='video-input'
               type='file'
-              id='video'
+              id='file-input'
               accept='image/*, video/*'
               onChange={(e) => onChange(e)}
             />
@@ -72,7 +83,11 @@ const App = () => {
         </form>
       </div>
 
-      {response && <div className='upload-status'>{response}</div>}
+      {response && (
+        <div id='upload-status' className='upload-status'>
+          {response}
+        </div>
+      )}
 
       <div className='sign-out'>
         <AmplifySignOut />
