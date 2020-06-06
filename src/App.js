@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import './App.css'
 import Amplify, { Storage } from 'aws-amplify'
-import { AmplifyAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
+import {
+  AmplifyAuthenticator,
+  AmplifySignOut,
+  AmplifySignIn,
+  AmplifySignUp,
+} from '@aws-amplify/ui-react'
 import { MdSend } from 'react-icons/md'
 import awsConfig from './aws-exports'
 Amplify.configure(awsConfig)
@@ -34,6 +39,14 @@ const App = () => {
 
   return (
     <AmplifyAuthenticator>
+      <AmplifySignIn
+        headerText='AWS TCS Team, Sign-In with Your E-Mail Address'
+        slot='sign-in'
+      />
+      <AmplifySignUp
+        headerText='AWS TCS Team, Sign-Up with Your Valid E-Mail Address'
+        slot='sign-up'
+      />
       <div className='header'>
         <h2>
           <a href='/'>TCS Team Video Uploader</a>
