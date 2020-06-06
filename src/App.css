@@ -1,3 +1,9 @@
+:root {
+  --amplify-primary-color: darkslateblue;
+  --amplify-primary-tint: rgb(39, 39, 151); 
+  --amplify-primary-shade: rgb(105, 95, 171);
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +41,139 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(211, 197, 255);
+}
+
+a:active {
+  text-decoration: none;
+  color: rgb(211, 197, 255);
+}
+
+body {
+  background-color: white;
+}
+
+.header {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 35px;
+  padding-right: 0;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-bottom: 0;
+  color: white;
+  background-color: darkslateblue;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.video-uploader {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 25px;
+  padding-right: 0;
+  padding-top: 1px;
+  padding-bottom: 0px;
+  margin-bottom: 5rem;
+  color: darkslateblue;
+  background-color: white;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+.upload-status {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 25px;
+  padding-right: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 1rem;
+  color: white;
+  background-color: darkslateblue;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+.btn {
+  text-decoration: none;
+  color: darkslateblue;
+  background-color: white;
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-size: 1.5rem;
+  outline: 0;
+  border: none;
+  border-radius: 2px;
+  display: block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+  text-transform: uppercase;
+  margin: 0 16px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  align-items: center;
+}
+.btn:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.btn-icon {
+  margin-left: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.select-label {
+  margin: 0 14px;
+  font-size: 2rem;
+}
+
+.video-input {
+  text-decoration: none;
+  color: darkslateblue;
+  background-color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+  text-transform: uppercase;
+  margin: 0 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
