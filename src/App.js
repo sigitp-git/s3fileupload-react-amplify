@@ -51,29 +51,29 @@ const App = () => {
   return (
     <AmplifyAuthenticator>
       <AmplifySignIn
-        headerText='AWS TCS Team, Sign-In with Your E-Mail Address'
+        headerText='Octank Field Agents, Sign-In with Your E-Mail Address'
         slot='sign-in'
       />
       <AmplifySignUp
-        headerText='AWS TCS Team, Sign-Up with Your Valid E-Mail Address'
+        headerText='Octank Field Agents, Sign-Up with Your Valid E-Mail Address'
         slot='sign-up'
       />
       <div className='header'>
-        <h2>
-          <a href='/'>TCS Team Video Uploader</a>
-        </h2>
+        <h4>
+          <a href='/'>Welcome, agents upload your work order below (pdf only)</a>
+        </h4>
       </div>
       <div className='video-uploader'>
         <form onSubmit={(e) => onSubmit(e)}>
           <p>
-            <label className='select-label'>Select video: </label>
+            <label className='select-label'>Select File: </label>
           </p>
           <p>
             <input
               className='video-input'
               type='file'
               id='file-input'
-              accept='image/*, video/*'
+              accept='application/pdf'
               onChange={(e) => onChange(e)}
             />
           </p>
