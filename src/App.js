@@ -33,7 +33,7 @@ const App = () => {
       })
         .then((result) => {
           console.log(result)
-          setResponse(`Success uploading file: ${name}!`)
+          setResponse(`Success uploading work order: ${name}!`)
         })
         .then(() => {
           document.getElementById('file-input').value = null

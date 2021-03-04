@@ -1,17 +1,3 @@
 {
-    "projectName": "s3fileupload",
-    "version": "3.0",
-    "frontend": "javascript",
-    "javascript": {
-        "framework": "react",
-        "config": {
-            "SourceDir": "src",
-            "DistributionDir": "build",
-            "BuildCommand": "npm run-script build",
-            "StartCommand": "npm run-script start"
-        }
-    },
-    "providers": [
-        "awscloudformation"
-    ]
+  "version": "3.0"
 }
